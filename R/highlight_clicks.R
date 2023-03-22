@@ -1,12 +1,37 @@
 #' Highlight Plotly Points
 #'
-#' @param layer_brush Provide a numeric value. If none supplied, layer_brush = 0 will be used.
+#' This JavaScript code defines a function that is used in a Plotly chart to capture changes in
+#' the visibility of the traces on the chart.
+#' The [layer_brush] is used to extract a DOM element from a D3.js selection to access
+#' its properties and modify its attributes.
 #'
+#'
+#' @param layer_brush Provide a numeric value. If none supplied, layer_brush = 0 will be used.
+#' In shiny, if this value is larger than 3, consider using modules.
+#' @param plotly_obj plotly object with points.
 #' @return
 #' @export
 #'
 #' @examples
-highlight_clicks <- function(layer_brush = 0) {
+#' ## Not run:
+#' library(dplyr)
+#' library(ggplot2)
+#'
+#' p_1 <- mtcars %>%
+#'   ggplot(aes(x = mpg, y = disp)) +
+#'   geom_point()
+#'
+#'library(plotly)
+#'library(htmlwidgets)
+#'
+#'p_1 %>%
+#'  ggplotly() %>%
+#'  onRender(jsCode = highlight_clicks(.))
+#'
+#'## End(Not run)
+highlight_clicks <- function(plotly_obj, layer_brush = 0) {
+  stopifnot("You did not pass me a 'plotly' object" = inherits(plotly_obj, c("plotly", "htmlwidget")))
+
   htmlwidgets::JS("function(el, x, layer_brush) {
     el.on('plotly_click', function (data) {",
     stringr::str_glue(

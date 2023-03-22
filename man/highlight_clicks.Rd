@@ -4,11 +4,35 @@
 \alias{highlight_clicks}
 \title{Highlight Plotly Points}
 \usage{
-highlight_clicks(layer_brush = 0)
+highlight_clicks(plotly_obj, layer_brush = 0)
 }
 \arguments{
-\item{layer_brush}{Provide a numeric value. If none supplied, layer_brush = 0 will be used.}
+\item{plotly_obj}{plotly object with points.}
+
+\item{layer_brush}{Provide a numeric value. If none supplied, layer_brush = 0 will be used.
+In shiny, if this value is larger than 3, consider using modules.}
 }
 \description{
-Highlight Plotly Points
+This JavaScript code defines a function that is used in a Plotly chart to capture changes in
+the visibility of the traces on the chart.
+The \link{layer_brush} is used to extract a DOM element from a D3.js selection to access
+its properties and modify its attributes.
+}
+\examples{
+## Not run:
+library(dplyr)
+library(ggplot2)
+
+p_1 <- mtcars \%>\%
+  ggplot(aes(x = mpg, y = disp)) +
+  geom_point()
+
+library(plotly)
+library(htmlwidgets)
+
+p_1 \%>\%
+ ggplotly() \%>\%
+ onRender(jsCode = highlight_clicks(.))
+
+## End(Not run)
 }
