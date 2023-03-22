@@ -1,0 +1,33 @@
+Package: dissthispkgr
+Type: Package
+Title: Personal R package of Chris Dissanayake
+Version: 0.1.0
+Authors@R: c(person("Chris", "Dissanayake", email = "chrisdissanayake99@gmail.com", role = c("aut", "cre")))
+Maintainer: Chris Dissanayake <chrisdissanayake99@gmail.com>
+Description: Personal R functions used by Chris Dissanayake.
+License: file LICENSE
+Encoding: UTF-8
+LazyData: true
+LinkingTo: Rcpp
+VignetteBuilder: knitr
+Imports:
+    Rcpp (>= 1.0.10),
+    dplyr,
+    janitor,
+    stringr,
+    ggplot2,
+    Matrix,
+    purrr,
+    scales,
+    MSwM, 
+    hht,     
+    plotly, 
+    htmlwidgets
+Suggests:
+    testthat,
+    knitr,
+    broom, 
+    RSQLite, 
+    DBI, 
+    dbplyr
+RoxygenNote: 7.2.3
