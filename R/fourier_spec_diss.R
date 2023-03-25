@@ -8,7 +8,10 @@
 #' @return A ggplot object representing the Fourier spectrogram of the signal
 #'
 #' @examples
-#' library(tidyverse)
+#' library(ggplot2)
+#' library(dplyr)
+#' library(tidyr)
+#'
 #' # Create a sine wave with frequency of 100 Hz and amplitude of 1
 #' time <- seq(0, 1000, length.out = 1000)
 #' signal <- sin(2 * pi * 100 * time)
