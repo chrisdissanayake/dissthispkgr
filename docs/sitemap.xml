@@ -13,6 +13,12 @@
     <loc>/index.html</loc>
   </url>
   <url>
+    <loc>/reference/country_name_or_code.html</loc>
+  </url>
+  <url>
+    <loc>/reference/fourier_spec_diss.html</loc>
+  </url>
+  <url>
     <loc>/reference/highlight_clicks.html</loc>
   </url>
   <url>
@@ -23,5 +29,8 @@
   </url>
   <url>
     <loc>/reference/summarize_diss.html</loc>
+  </url>
+  <url>
+    <loc>/reference/summarize_enkeyed.html</loc>
   </url>
 </urlset>
