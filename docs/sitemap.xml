@@ -16,6 +16,9 @@
     <loc>/reference/country_name_or_code.html</loc>
   </url>
   <url>
+    <loc>/reference/factorial_z.html</loc>
+  </url>
+  <url>
     <loc>/reference/fourier_spec_diss.html</loc>
   </url>
   <url>
@@ -32,5 +35,8 @@
   </url>
   <url>
     <loc>/reference/summarize_enkeyed.html</loc>
+  </url>
+  <url>
+    <loc>/reference/zernike_expansion.html</loc>
   </url>
 </urlset>

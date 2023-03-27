@@ -9,7 +9,7 @@
 #' @param layer_brush Provide a numeric value. If none supplied, layer_brush = 0 will be used.
 #' In shiny, if this value is larger than 3, consider using modules.
 #' @param plotly_obj plotly object with points.
-#' @return
+#' @return plotly_object
 #' @export
 #'
 #' @examples

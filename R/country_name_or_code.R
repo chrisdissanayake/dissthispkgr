@@ -19,7 +19,7 @@
 #' # Error: input contains both country codes and country names
 #' country_name_or_code(c("US", "GB", "CA"))
 #'
-#' @importFrom countrycode
+#' @importFrom countrycode countrycode
 #' @export
 country_name_or_code <- function(x) {
   if (all(is.na(x) | nchar(x) == 2)) {

@@ -12,6 +12,9 @@ highlight_clicks(plotly_obj, layer_brush = 0)
 \item{layer_brush}{Provide a numeric value. If none supplied, layer_brush = 0 will be used.
 In shiny, if this value is larger than 3, consider using modules.}
 }
+\value{
+plotly_object
+}
 \description{
 This JavaScript code defines a function that is used in a Plotly chart to capture changes in
 the visibility of the traces on the chart.

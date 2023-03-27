@@ -5,3 +5,26 @@ rcpp_hello <- function() {
     .Call(`_dissthispkgr_rcpp_hello`)
 }
 
+#' Zernike expansion in Rcpp
+#'
+#' Calculates the Zernike expansion of a set of points in Cartesian coordinates.
+#' This is a slightly faster version of the R code I wrote a while ago. The esoteric types like
+#' Bhatia-Wolf will be added later.
+#'
+#' @param x NumericVector of x-coordinates.
+#' @param y NumericVector of y-coordinates.
+#' @param noll Integer specifying the Noll index of the Zernike polynomial.
+#' @param normalized Boolean indicating whether the expansion should be normalized.
+#' @return NumericVector of the Zernike expansion coefficients.
+#'
+#' @examples
+#' x <- c(1, 2, 3)
+#' y <- c(4, 5, 6)
+#' zernike_expansion_rcpp(x, y, 3, TRUE)
+#'
+#' Obtain polynomials
+
+zernike_expansion <- function(x, y, noll, normalized = TRUE) {
+    .Call(`_dissthispkgr_zernike_expansion`, x, y, noll, normalized)
+}
+

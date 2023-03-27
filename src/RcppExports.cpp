@@ -20,9 +20,24 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// zernike_expansion
+NumericVector zernike_expansion(NumericVector x, NumericVector y, int noll, bool normalized);
+RcppExport SEXP _dissthispkgr_zernike_expansion(SEXP xSEXP, SEXP ySEXP, SEXP nollSEXP, SEXP normalizedSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericVector >::type x(xSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type y(ySEXP);
+    Rcpp::traits::input_parameter< int >::type noll(nollSEXP);
+    Rcpp::traits::input_parameter< bool >::type normalized(normalizedSEXP);
+    rcpp_result_gen = Rcpp::wrap(zernike_expansion(x, y, noll, normalized));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_dissthispkgr_rcpp_hello", (DL_FUNC) &_dissthispkgr_rcpp_hello, 0},
+    {"_dissthispkgr_zernike_expansion", (DL_FUNC) &_dissthispkgr_zernike_expansion, 4},
     {NULL, NULL, 0}
 };
 
