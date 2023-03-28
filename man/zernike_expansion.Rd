@@ -26,7 +26,6 @@ Bhatia-Wolf will be added later.
 \examples{
 x <- c(1, 2, 3)
 y <- c(4, 5, 6)
-zernike_expansion_rcpp(x, y, 3, TRUE)
+zernike_expansion(x, y, 3, TRUE)
 
-Obtain polynomials
 }

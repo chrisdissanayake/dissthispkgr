@@ -2,7 +2,7 @@
 % Please edit documentation in R/fourier_spec_diss.R
 \name{fourier_spec_diss}
 \alias{fourier_spec_diss}
-\title{Computes the Fourier spectrogram of a signal}
+\title{Plot Fourier spectrogram of a signal}
 \usage{
 fourier_spec_diss(tbl, title = "signal")
 }
@@ -15,7 +15,7 @@ fourier_spec_diss(tbl, title = "signal")
 A ggplot object representing the Fourier spectrogram of the signal
 }
 \description{
-I am writing this for my own benefit in order to make the TF signal stand out and aesthetically pleasing.
+My aim in writing this is to make the TF signal stand out and pleasing.
 }
 \examples{
 library(ggplot2)
@@ -30,8 +30,8 @@ signal <- sin(2 * pi * 100 * time)
 set.seed(123)
 signal <- signal + rnorm(length(signal), sd = 0.01)
 
-# Put the signal into a data frame with a time column
 df <- data.frame(time = time, signal = signal)
+
 plot(df, type = "o")
 fourier_spec_diss(df)
 

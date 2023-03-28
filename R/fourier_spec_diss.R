@@ -1,6 +1,6 @@
-#' Computes the Fourier spectrogram of a signal
+#' Plot Fourier spectrogram of a signal
 #'
-#' I am writing this for my own benefit in order to make the TF signal stand out and aesthetically pleasing.
+#' My aim in writing this is to make the TF signal stand out and pleasing.
 #'
 #' @param tbl A data frame containing the time and signal columns
 #' @param title A character string specifying the title of the spectrogram (default is "signal")
@@ -20,8 +20,8 @@
 #' set.seed(123)
 #' signal <- signal + rnorm(length(signal), sd = 0.01)
 #'
-#' # Put the signal into a data frame with a time column
 #' df <- data.frame(time = time, signal = signal)
+#'
 #' plot(df, type = "o")
 #' fourier_spec_diss(df)
 #'
