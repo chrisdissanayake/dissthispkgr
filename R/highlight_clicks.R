@@ -2,7 +2,7 @@
 #'
 #' This JavaScript code defines a function that is used in a Plotly chart to capture changes in
 #' the visibility of the traces on the chart.
-#' The [layer_brush] is used to extract a DOM element from a D3.js selection to access
+#' The layer_brush is used to extract a DOM element from a D3.js selection to access
 #' its properties and modify its attributes.
 #'
 #'

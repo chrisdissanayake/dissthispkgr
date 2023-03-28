@@ -3,9 +3,6 @@
 \name{zernike_expansion}
 \alias{zernike_expansion}
 \title{Zernike expansion in Rcpp}
-\usage{
-zernike_expansion(x, y, noll, normalized = TRUE)
-}
 \arguments{
 \item{x}{NumericVector of x-coordinates.}
 

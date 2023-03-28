@@ -18,6 +18,7 @@ using namespace Rcpp;
 //' y <- c(4, 5, 6)
 //' zernike_expansion(x, y, 3, TRUE)
 //'
+//' @name zernike_expansion
 double factorial_z(int n) {
   double result = 1;
   for (int i = 2; i <= n; ++i) {

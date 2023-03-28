@@ -10,16 +10,6 @@ Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
 Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
-// rcpp_hello
-List rcpp_hello();
-RcppExport SEXP _dissthispkgr_rcpp_hello() {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    rcpp_result_gen = Rcpp::wrap(rcpp_hello());
-    return rcpp_result_gen;
-END_RCPP
-}
 // zernike_expansion
 NumericVector zernike_expansion(NumericVector x, NumericVector y, int noll, bool normalized);
 RcppExport SEXP _dissthispkgr_zernike_expansion(SEXP xSEXP, SEXP ySEXP, SEXP nollSEXP, SEXP normalizedSEXP) {
@@ -36,7 +26,6 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_dissthispkgr_rcpp_hello", (DL_FUNC) &_dissthispkgr_rcpp_hello, 0},
     {"_dissthispkgr_zernike_expansion", (DL_FUNC) &_dissthispkgr_zernike_expansion, 4},
     {NULL, NULL, 0}
 };

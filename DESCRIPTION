@@ -1,7 +1,7 @@
 Package: dissthispkgr
 Type: Package
 Title: Personal R package of Chris Dissanayake
-Version: 0.1.0
+Version: 2023.01.01
 Authors@R: c(person("Chris", "Dissanayake", email = "chrisdissanayake99@gmail.com", role = c("aut", "cre")))
 Maintainer: Chris Dissanayake <chrisdissanayake99@gmail.com>
 Description: Personal R functions used by Chris Dissanayake.
