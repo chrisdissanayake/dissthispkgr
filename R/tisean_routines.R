@@ -36,11 +36,11 @@ tisean_diss <- function(
 
   binary_location <- paste0(tisean_path, "/bin/", routine)
 
-  # create output file
+  print(tempdir())
+
   output_file <- tempfile()
   output_file_name <- gsub("(^.*\\\\)(.*$)", "\\2", output_file)
 
-  # create input file if time series is provided
   if (!is.null(time_series)) {
     # create a temp file name
     input_file <- tempfile()
@@ -57,14 +57,15 @@ tisean_diss <- function(
     )
   }
 
-  # print command for troubleshooting
+  # sanity check
   print(shell_command)
 
-  # execute command
+  # to troubleshoot potential issues
   system(shell_command, show.output.on.console = show_output_on_console)
 
   # select the latest temp files from the directory.
   # multi-file output corner case is not handles; are there any ?
+  # dplyr dependency here
   output_file <- file.info(dir(tempdir(), full.names = TRUE)) %>%
     arrange(desc(ctime)) %>%
     filter(grepl(output_file_name, rownames(.))) %>%
