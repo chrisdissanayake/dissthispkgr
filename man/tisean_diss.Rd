@@ -33,6 +33,7 @@ A numeric vector or matrix.
 A verbose method before I figure out how to do this in rcpp!
 }
 \examples{
+\dontrun{
 library(dissthispkgr)
 library(dplyr)
 henon_m <- tisean_diss(
@@ -40,4 +41,5 @@ henon_m <- tisean_diss(
   remove_header = FALSE,
   show.output.on.console = FALSE, l = 10000)
 plot(henon_m)
+}
 }

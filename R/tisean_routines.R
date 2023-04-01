@@ -11,6 +11,7 @@
 #' @return A numeric vector or matrix.
 #' @import dplyr
 #' @examples
+#' \dontrun{
 #' library(dissthispkgr)
 #' library(dplyr)
 #' henon_m <- tisean_diss(
@@ -18,6 +19,7 @@
 #'   remove_header = FALSE,
 #'   show.output.on.console = FALSE, l = 10000)
 #' plot(henon_m)
+#' }
 #' @export
 tisean_diss <- function(
     tisean_path = "/mnt/working_volume/tisean/TISEAN_3.0.1_unix/Tisean_3.0.1",
