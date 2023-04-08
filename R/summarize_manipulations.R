@@ -22,13 +22,13 @@ summarize_diss <- function(data, summary_vars, summary_stats) {
   data %>%
     dplyr::summarize(dplyr::across({{summary_vars}},
                                    .fns = setNames(map(summary_stats, ~ match.fun(.x)),
-                                                   summary_stats),
+                                                   paste0(summary_vars, "&&", summary_stats)),
                                    na.rm = TRUE),
                      .groups = "keep") %>%
     tidyr::pivot_longer(
       cols = dplyr::ends_with(summary_stats),
       names_to = c("variable", "summary"),
-      names_sep = "_",
+      names_sep = "&&",
       values_to = "statistic"
     ) %>%
     tidyr::pivot_wider(names_from = summary, values_from = statistic)
