@@ -4,7 +4,7 @@
 \alias{fourier_spec_diss}
 \title{Plot Fourier spectrogram of a signal}
 \usage{
-fourier_spec_diss(tbl, title = "signal")
+fourier_spec_diss(tbl, nfft = 4000, ns = 30, nov = 0, title = "signal")
 }
 \arguments{
 \item{tbl}{A data frame containing the time and signal columns}

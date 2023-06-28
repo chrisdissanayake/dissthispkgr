@@ -26,9 +26,9 @@
 #' fourier_spec_diss(df)
 #'
 #' @export
-fourier_spec_diss <- function(tbl, title = "signal") {
+fourier_spec_diss <- function(tbl, nfft = 4000, ns = 30, nov = 0, title = "signal") {
   dt <- mean(diff(tbl$time))
-  ft <- list(nfft = 4000, ns = 30, nov = 0)
+  ft <- list(nfft = nfft, ns = ns, nov = nov)
   freq_span <- c(0, 1/(dt + 2) - 0.01)
 
   sig <- tbl$signal
